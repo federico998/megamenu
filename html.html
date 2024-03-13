@@ -5,7 +5,13 @@
         <script defer>
             let i = document.getElementsByClassName("over__menu__Service");
             function comparsa(){
-                i[0].style.zIndex = "2";
+                if(i[0].style.zIndex == "0"){
+                    i[0].style.zIndex = "2";
+                }
+                else{
+                    i[0].style.zIndex = "0";
+                }
+                
             }
         </script>
     </head>
