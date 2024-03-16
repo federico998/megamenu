@@ -3,15 +3,11 @@
     <head>
         <link rel="stylesheet" href="css.css">
         <script defer>
-            let i = document.getElementsByClassName("over__menu__Service");
-            function comparsa(){
-                if(i[0].style.zIndex == "0"){
-                    i[0].style.zIndex = "2";
-                }
-                else{
-                    i[0].style.zIndex = "0";
-                }
-                
+            let i = 0;
+            function comparsa(name,name1,name2){
+                document.getElementsByClassName(name)[0].classList.toggle("open");
+                document.getElementsByClassName(name1)[0].classList.remove("open");
+                document.getElementsByClassName(name2)[0].classList.remove("open");
             }
         </script>
     </head>
@@ -21,9 +17,9 @@
                 <div class="logo"><img src="logo.png"></div>
                 <div class="menu__selezione">
                     <ul>
-                        <li width="98px"><a onClick="comparsa()">Services</a><div class="arrow"></div></li>
-                        <li width="106px">Industries<div class="arrow"></div></li>
-                        <li width="96px">Portfolio<div class="arrow"></div></li>
+                        <li onClick="comparsa('over__menu__Service', 'over__menu__Industries','over__menu__Portfolio')" width="98px"><a>Services</a><span class="arrow"></span></li>
+                        <li onClick="comparsa('over__menu__Industries','over__menu__Service','over__menu__Portfolio')" width="106px"><a>Industries</a><div class="arrow"></div></li>
+                        <li onClick="comparsa('over__menu__Portfolio','over__menu__Industries','over__menu__Service')"width="96px">Portfolio<div class="arrow"></div></li>
                         <li width="128px">Content Hub<div class="arrow"></div></li>
                     </ul>
                 </div>
@@ -54,6 +50,76 @@
                             <div class="immagine__content__right"><img src="imagine1.png" width="308px" height="204px"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="over__menu__Industries">
+                <div class="menu__Industries__content">
+                    <div class="Industries__content__left">
+                        <ul>
+                            <li id="primo"><div class="li__industries">Post a job and hire a pro<br><div class="main__category">Main Category Item</div></div><img src="widget.png" width="19px" height="19px"></li>
+                            <li><div class="li__industries">Post a job and hire a pro<br><div class="main__category">Main Category Item</div></div><img src="widget.png" width="19px" height="19px"></li>
+                            <li><div class="li__industries">Post a job and hire a pro<br><div class="main__category">Main Category Item</div></div><img src="widget.png" width="19px" height="19px"></li>
+                            <li><div class="li__industries">Post a job and hire a pro<br><div class="main__category">Main Category Item</div></div><img src="widget.png" width="19px" height="19px"></li>
+                        </ul>
+                    </div>
+                    <div class="Industries__content__right">
+                        <div class="content__right">
+                            <div class="menu__right">
+                                <ul>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                </ul>
+                            </div>
+                            <div class="menu__right">
+                                <ul>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                </ul>
+                            </div>
+                            <div class="menu__right">
+                                <ul>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                    <li>Sub Menu Items</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="more__right">
+                            <div class="learn__more">
+                                <div class="learn__more__link">
+                                    <ul>
+                                        <li><img src="widget.png"></li>
+                                        <li><a href="#">Link More</a></li>
+                                        <li><div class="arrow"></div></li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="over__menu__Portfolio">
+                <div class="Conteiner__triangolo"><div class="triangolo"></div></div>
+                <div class="conteiner__menu__Portfolio">
+                    <div class="contenuto__menu__Portfolio">
+                        <ul>
+                            <li>Sub Menu Items</li>
+                            <li>Sub Menu Items</li>
+                            <li>Sub Menu Items</li>
+                            <li>Sub Menu Items</li>
+                            <li>Sub Menu Items</li>
+                        </ul>
+                    </div>
+                    <div class="Product">Product<div class="arrow"></div></div>
                 </div>
             </div>
         </div>
